@@ -10,10 +10,30 @@ use Tinywan\Jwt\JwtToken;
 
 class AccountController extends Base
 {
+    /**
+     * 登陆
+     * @param Request $request
+     * @return \support\Response
+     */
     function login(Request $request)
     {
         $mobile = $request->input('mobile');
         $password = $request->input('password');
+        $user = User::where(['mobile' => $mobile])->first();
+        if (!$user) {
+            return $this->fail('用户不存在');
+        }
+        if (!password_verify($password, $user->password)) {
+            return $this->fail('密码错误');
+        }
+        $token = JwtToken::generateToken([
+            'id' => $user->id,
+            'client' => JwtToken::TOKEN_CLIENT_MOBILE
+        ]);
+        return $this->success('成功', [
+            'user' => $user->refresh(),
+            'token' => $token
+        ]);
     }
 
     /**
