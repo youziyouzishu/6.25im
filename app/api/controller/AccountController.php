@@ -1,0 +1,55 @@
+<?php
+
+namespace app\api\controller;
+
+use app\admin\model\Sms;
+use app\admin\model\User;
+use app\api\basic\Base;
+use support\Request;
+use Tinywan\Jwt\JwtToken;
+
+class AccountController extends Base
+{
+    function login(Request $request)
+    {
+        $mobile = $request->input('mobile');
+        $password = $request->input('password');
+    }
+
+    /**
+     * 注册
+     * @param Request $request
+     * @return \support\Response
+     */
+    function register(Request $request)
+    {
+        $mobile = $request->input('mobile');
+        $captcha = $request->input('captcha');
+        if (!Sms::check($mobile, $captcha, 'register')) {
+            return $this->fail('验证码错误');
+        }
+        $user = User::create([
+            'mobile' => $mobile
+        ]);
+        $token = JwtToken::generateToken([
+            'id' => $user->id,
+            'client' => JwtToken::TOKEN_CLIENT_MOBILE
+        ]);
+        return $this->success('成功', [
+            'user' => $user->refresh(),
+            'token' => $token
+        ]);
+    }
+
+    /**
+     * 判断用户是否存在
+     * @param Request $request
+     * @return \support\Response
+     */
+    function mobileIsExists(Request $request)
+    {
+        $mobile = $request->input('mobile');
+        $exists = User::where(['mobile' => $mobile])->exists();
+        return $this->success('成功',['exists' => $exists]);
+    }
+}
