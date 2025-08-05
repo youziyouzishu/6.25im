@@ -10,6 +10,7 @@ use Tinywan\Jwt\JwtToken;
 
 class AccountController extends Base
 {
+    protected array $noNeedLogin = ['*'];
     /**
      * 登陆
      * @param Request $request
@@ -68,8 +69,11 @@ class AccountController extends Base
      */
     function mobileIsExists(Request $request)
     {
+        dump(1111);
         $mobile = $request->input('mobile');
+        dump(2222);
         $exists = User::where(['mobile' => $mobile])->exists();
+        dump(3333);
         return $this->success('成功',['exists' => $exists]);
     }
 }
