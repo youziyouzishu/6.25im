@@ -20,12 +20,20 @@ class AccountController extends Base
     {
         $mobile = $request->input('mobile');
         $password = $request->input('password');
+        $captcha = $request->input('captcha');
+        $login_type = $request->input('login_type');#1=验证码登陆 2=密码登陆
         $user = User::where(['mobile' => $mobile])->first();
         if (!$user) {
             return $this->fail('用户不存在');
         }
-        if (!password_verify($password, $user->password)) {
-            return $this->fail('密码错误');
+        if ($login_type == 1) {
+            if (!Sms::check($mobile, $captcha, 'login')) {
+                return $this->fail('验证码错误');
+            }
+        }else{
+            if (!password_verify($password, $user->password)) {
+                return $this->fail('密码错误');
+            }
         }
         $token = JwtToken::generateToken([
             'id' => $user->id,
@@ -49,6 +57,10 @@ class AccountController extends Base
         if (!Sms::check($mobile, $captcha, 'register')) {
             return $this->fail('验证码错误');
         }
+        $exists = User::where(['mobile' => $mobile])->exists();
+        if ($exists) {
+            return $this->fail('用户已存在');
+        }
         $user = User::create([
             'mobile' => $mobile
         ]);
@@ -69,11 +81,8 @@ class AccountController extends Base
      */
     function mobileIsExists(Request $request)
     {
-        dump(1111);
         $mobile = $request->input('mobile');
-        dump(2222);
         $exists = User::where(['mobile' => $mobile])->exists();
-        dump(3333);
         return $this->success('成功',['exists' => $exists]);
     }
 }
