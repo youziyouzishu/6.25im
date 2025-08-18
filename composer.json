@@ -32,12 +32,12 @@
     "tinywan/exception-handler": "^1.6",
     "tinywan/validate": "^1.0",
     "tinywan/jwt": "^1.11",
-    "kriss/webman-eloquent-ide-helper": "^1.2",
     "webman/console": "^2.1",
     "webman/log": "^2.1",
     "symfony/var-dumper": "^7.3",
     "illuminate/events": "^11.45",
-    "webman/redis": "^2.1"
+    "webman/redis": "^2.1",
+    "kriss/webman-eloquent-ide-helper": "^1.3"
   },
   "suggest": {
     "ext-event": "For better performance. "

@@ -6,6 +6,7 @@ use app\admin\model\Sms;
 use app\admin\model\User;
 use app\api\basic\Base;
 use support\Request;
+use support\Response;
 use Tinywan\Jwt\JwtToken;
 
 class AccountController extends Base
@@ -84,5 +85,16 @@ class AccountController extends Base
         $mobile = $request->input('mobile');
         $exists = User::where(['mobile' => $mobile])->exists();
         return $this->success('成功',['exists' => $exists]);
+    }
+
+    /**
+     * 刷新令牌
+     * @param Request $request
+     * @return Response
+     */
+    function refreshToken(Request $request)
+    {
+        $res = JwtToken::refreshToken();
+        return $this->success('刷新成功', $res);
     }
 }

@@ -18,7 +18,11 @@ class UserController extends Base
      */
     function getUserInfo(Request $request)
     {
-        $row = User::find($request->user_id);
+        $user_id = $request->input('user_id');
+        if (!$user_id) {
+            $user_id = $request->user_id;
+        }
+        $row = User::find($user_id);
         if (!$row) {
             throw new JwtRefreshTokenExpiredException();
         }
@@ -37,6 +41,9 @@ class UserController extends Base
         foreach ($param as $key => $value) {
             if (!in_array($key, $fields)) {
                 unset($param[$key]);
+            }
+            if ($key == 'sex') {
+                $param[$key] = strval($value);
             }
             if ($key == 'password') {
                 $param[$key] = password_hash($value, PASSWORD_DEFAULT);

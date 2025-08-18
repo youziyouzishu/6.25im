@@ -11,8 +11,6 @@ use support\Db;
 
 
 /**
- * 
- *
  * @property int $id 主键
  * @property string|null $username 用户名
  * @property string|null $nickname 昵称
