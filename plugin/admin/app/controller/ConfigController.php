@@ -93,6 +93,9 @@ class ConfigController extends Base
                     $data[$section]['user_agreement'] = $items['user_agreement'] ?? '';
                     $data[$section]['invite_rule'] = $items['invite_rule'] ?? '';
                     break;
+                case 'kefu':
+                    $data[$section]['kefu_id'] = $items['kefu_id'] ?? '';
+                    break;
                 case 'tab':
                     $data[$section]['enable'] = true;
                     $data[$section]['keepState'] = !empty($items['keepState']);
