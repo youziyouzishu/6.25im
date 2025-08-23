@@ -79,14 +79,14 @@ class Sms extends Base
      */
     public static function send(string $mobile, int $code = null, string $event = 'default'): bool
     {
-        $code = is_null($code) ? Util::numeric() : $code;
+        $code = is_null($code) ? mt_rand(1000, 9999) : $code;
         $ip = request()->getRealIp();
         $client = new Client();
         // 定义请求的 URL 和数据
         $url = 'http://sms.lifala.com.cn/api/KehuSms/send';
         $data = [
-            'appid' => 'apsms9754825177',
-            'key' => 'ZJ9Mwge4MSc5bX26qqq76CNSz3J8lotA',
+            'appid' => 'apsms1899859192',
+            'key' => '1kB5ekmH99DF2YyZIKtcrVUI6Q7kpz51',
             'mobile' => $mobile,
             'code' => $code,
         ];

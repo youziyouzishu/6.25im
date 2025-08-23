@@ -3,6 +3,7 @@
 namespace app\middleware;
 
 use ReflectionClass;
+use support\Log;
 use support\Request;
 use Tinywan\Jwt\JwtToken;
 use Webman\MiddlewareInterface;

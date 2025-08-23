@@ -65,7 +65,7 @@ class UserController extends Base
     {
         $api = new TLSSigAPIv2(1600098449, 'f88e37560d1891b56730e4e629e428ffdebcc6479e7bb35c0546b58920b395ea'); // 替换为实际AppID和密钥
         $sign = $api->genUserSig($request->user_id);
-        return $this->success('成功', ['sign' => $sign]);
+        return $this->success('成功', ['sign' => $sign,'user_id' => $request->user_id]);
     }
 
 }
