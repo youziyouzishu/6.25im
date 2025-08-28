@@ -89,7 +89,10 @@ class TencentIM
             'Nick' => $Nick,
             'FaceUrl' => $FaceUrl
         ];
-        return Http::post($url, json_encode($data));
+        $response = $this->client->post($url, [
+            'json' => $data
+        ]);
+        return $response->getBody()->getContents();
     }
 
 
