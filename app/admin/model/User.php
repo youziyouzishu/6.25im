@@ -52,6 +52,8 @@ use support\Db;
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User onlyTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User withTrashed()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|User withoutTrashed()
+ * @property \Illuminate\Support\Carbon|null $last_online_time 最后在线时间
+ * @property-read mixed $last_online_timestamp
  * @mixin \Eloquent
  */
 class User extends Base
@@ -77,7 +79,8 @@ class User extends Base
         'updated_at' => 'datetime',
         'last_time' => 'datetime',
         'join_time' => 'datetime',
-        'vip_expire_time' => 'datetime'
+        'vip_expire_time' => 'datetime',
+        'last_online_time' => 'datetime',
     ];
 
     protected $fillable = [
@@ -107,8 +110,14 @@ class User extends Base
 
     protected $appends = [
         'vip_text',
-        'vip_level'
+        'vip_level',
+        'last_online_timestamp',
     ];
+
+    function getLastOnlineTimestampAttribute()
+    {
+        return $this->last_online_time ? $this->last_online_time->timestamp : null;
+    }
 
     public static function changeMoney($money, $user_id, $memo)
     {

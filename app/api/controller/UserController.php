@@ -4,6 +4,7 @@ namespace app\api\controller;
 
 use app\admin\model\User;
 use app\api\basic\Base;
+use Carbon\Carbon;
 use support\Request;
 use support\Response;
 use Tencent\TLSSigAPIv2;
@@ -66,6 +67,14 @@ class UserController extends Base
         $api = new TLSSigAPIv2(1600098449, 'f88e37560d1891b56730e4e629e428ffdebcc6479e7bb35c0546b58920b395ea'); // 替换为实际AppID和密钥
         $sign = $api->genUserSig($request->user_id);
         return $this->success('成功', ['sign' => $sign,'user_id' => $request->user_id]);
+    }
+
+    function updateLastTime(Request $request)
+    {
+        $row = User::find($request->user_id);
+        $row->last_online_time = Carbon::now();
+        $row->save();
+        return $this->success('成功');
     }
 
 }
