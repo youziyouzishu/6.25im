@@ -6,13 +6,13 @@ return [
             // 数据库类型
             'type' => 'mysql',
             // 服务器地址
-            'hostname' => '122.114.237.95',
+            'hostname' => '150.109.148.67',
             // 数据库名
-            'database' => '0625im_95_hzgqap',
+            'database' => 'xad_xprojectcs_c',
             // 数据库用户名
-            'username' => '0625im_95_hzgqap',
+            'username' => 'xad_xprojectcs_c',
             // 数据库密码
-            'password' => 'CCmeTZSpw9CYfwiw',
+            'password' => '7ZrQZRFa2yRZPxTp',
             // 数据库连接端口
             'hostport' => 3306,
             // 数据库连接参数

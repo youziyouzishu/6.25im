@@ -95,6 +95,7 @@ class ConfigController extends Base
                     break;
                 case 'kefu':
                     $data[$section]['kefu_id'] = $items['kefu_id'] ?? '';
+                    $data[$section]['notice'] = htmlspecialchars($items['notice'] ?? '');
                     break;
                 case 'tab':
                     $data[$section]['enable'] = true;
