@@ -31,6 +31,20 @@ class UserController extends Base
     }
 
     /**
+     * 搜索
+     * @param Request $request
+     * @return Response
+     */
+    function search(Request $request)
+    {
+        $keyword = $request->input('keyword');
+        $rows = User::where(function ($query) use ($keyword) {
+            $query->orWhere('nickname', 'like', '%' . $keyword . '%')->orWhere('mobile', 'like', '%' . $keyword . '%')->orWhere('id', $keyword);
+        })->paginate()->items();
+        return $this->success('成功', $rows);
+    }
+
+    /**
      * 编辑用户信息
      * @param Request $request
      * @return Response
