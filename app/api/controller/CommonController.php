@@ -27,13 +27,15 @@ class CommonController extends Base
         return $this->success('成功', $config);
     }
 
-    #获取版本信息
+    /**
+     * 获取版本信息
+     * @return \support\Response
+     */
     function getVersion()
     {
-        $version = Version::latest()->first();
+        $version = Version::orderByDesc('weigh')->orderByDesc('id')->first();
         return $this->success('获取成功',$version);
     }
-
 
 
 }
