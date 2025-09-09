@@ -94,7 +94,7 @@ class UserController extends Crud
                     ],
                     [
                         'Tag' => 'Tag_Profile_IM_Image',
-                        'Value' => 'https://xad.xprojectcs.cn' . $avatar
+                        'Value' => 'https://wzxinnan.top' . $avatar
                     ],
                 ]);
             }
