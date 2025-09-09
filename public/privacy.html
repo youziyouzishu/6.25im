@@ -2,264 +2,213 @@
 <html lang="zh-CN">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>隐私政策 - 温州市楠信科技有限公司（信安达）</title>
-    <meta name="description" content="温州市楠信科技有限公司（信安达）隐私政策说明页面。" />
     <style>
-        :root{
-            --bg:#0b0f19;
-            --card:#111827;
-            --muted:#9ca3af;
-            --text:#e5e7eb;
-            --accent:#60a5fa;
-            --border:#1f2937;
-        }
-        html,body{height:100%}
-        body{
-            margin:0; font:16px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; color:var(--text); background:radial-gradient(1200px 600px at 10% -10%, #1f2937 0, transparent 60%),
-        radial-gradient(900px 500px at 110% -20%, #0f172a 0, transparent 60%), var(--bg);
-        }
-        .container{max-width:960px; margin:0 auto; padding:48px 20px 96px}
-        header{display:flex; flex-direction:column; gap:8px; margin-bottom:24px}
-        .brand{display:flex; align-items:center; gap:12px}
-        .logo{width:40px; height:40px; border-radius:12px; background:linear-gradient(135deg,#8b5cf6,#06b6d4); box-shadow:0 6px 24px rgba(0,0,0,.35)}
-        h1{margin:0; font-size:28px; letter-spacing:.4px}
-        .meta{color:var(--muted); font-size:14px}
-        .card{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid var(--border); border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,.25)}
-        nav.card{position:sticky; top:12px; padding:16px 18px; margin-bottom:24px}
-        nav h2{font-size:16px; margin:0 0 6px}
-        nav ol{margin:0; padding-left:18px}
-        nav a{color:var(--text); text-decoration:none}
-        nav a:hover{color:var(--accent)}
-        article.card{padding:24px}
-        section{margin:28px 0}
-        h2{font-size:22px; margin:8px 0 10px}
-        h3{font-size:18px; margin:10px 0}
-        p{margin:10px 0}
-        ul,ol{padding-left:20px}
-        li{margin:6px 0}
-        a{color:#93c5fd}
-        code.k{font-family:ui-monospace,Menlo,Consolas,monospace; font-size:.95em; background:#0b1220; border:1px solid var(--border); padding:.1em .4em; border-radius:6px}
-        .note{padding:12px 14px; border:1px dashed var(--border); border-radius:12px; color:var(--muted)}
-        .grid{display:grid; grid-template-columns:1fr; gap:24px}
-        @media (min-width: 960px){
-            .grid{grid-template-columns:280px 1fr}
-        }
-        footer{margin-top:36px; color:var(--muted); font-size:14px; text-align:center}
-        strong.u{ text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px }
-        /* 打印优化 */
-        @media print{
-            body{background:#fff; color:#000}
-            .card, nav.card, article.card{background:#fff; box-shadow:none; border:1px solid #ddd}
-            a{color:#0645ad}
-        }
+        body { font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif; line-height:1.6; padding:20px; color:#222 }
+        h1,h2,h3 { color:#111 }
+        pre { white-space: pre-wrap; word-break:break-word }
+        .meta { background:#fafafa; border-left:4px solid #eee; padding:12px; margin-bottom:20px }
+        .section { margin-bottom:18px }
+        ol,ul { margin-left:20px }
     </style>
 </head>
 <body>
-<div class="container">
-    <header>
-        <div class="brand">
-            <div class="logo" aria-hidden="true"></div>
-            <h1>隐私政策（Privacy Policy）</h1>
-        </div>
-        <div class="meta">
-            发布及生效时间：<time datetime="2025-08-14">2025年8月14日</time> ｜ 更新时间：<time datetime="2025-09-03">2025年9月3日</time><br/>
-            公司名称：温州市楠信科技有限公司 ｜ 产品/服务简称：信安达<br/>
-            注册地址/常用办公联系地址：浙江省温州市龙湾区蒲州街道高一路168号E幢5楼568室 ｜ 联系邮箱：<a href="mailto:2015539763@qq.com">2015539763@qq.com</a>
-        </div>
-        <p class="note">在使用“信安达”各项产品或服务前，请您完整阅读并理解本政策。<strong class="u">以粗体/下划线表示的内容为您需要重点关注的条款</strong>。</p>
-    </header>
+<h1>隐私政策</h1>
 
-    <div class="grid">
-        <nav class="card" aria-label="页面目录">
-            <h2>目录</h2>
-            <ol>
-                <li><a href="#scope">一、定义及适用范围</a></li>
-                <li><a href="#use">二、我司如何收集和使用您的个人信息</a></li>
-                <li><a href="#cookie">三、我司如何使用 Cookie 和同类技术</a></li>
-                <li><a href="#share">四、我司如何共享、转让、公开披露您的信息</a></li>
-                <li><a href="#storage">五、我司如何保护、存储您的信息</a></li>
-                <li><a href="#rights">六、如何访问和管理自己的信息、信息安全</a></li>
-                <li><a href="#other">七、其他</a></li>
-                <li><a href="#sdk">第三方 SDK 列表</a></li>
-            </ol>
-        </nav>
-
-        <article class="card">
-            <section>
-                <p>本政策仅适用于温州市楠信科技有限公司提供的产品和服务及其延伸的功能（以下简称“信安达”）。如我们提供的某款产品有单独的隐私政策或相应的用户服务协议当中存在特殊约定，则该产品的隐私政策将优先适用；该款产品隐私政策和用户服务协议未涵盖的内容，以本政策内容为准。除本隐私权政策另有规定外，在未征得您事先许可的情况下，本系统不会将这些信息对外披露或向第三方提供。本系统会不时更新本隐私权政策。您在同意本系统服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于本系统服务使用协议不可分割的一部分。</p>
-                <p>本政策适用于“信安达”提供的所有产品和服务。在您使用“信安达”各项产品或者服务前，请您务必仔细阅读并透彻理解本政策，特别是<strong class="u">以粗体/粗体下划线标识的条款</strong>，您应重点阅读，确保您充分理解和同意后再开始使用。本政策中涉及的专业词汇，我司尽量以简明通俗的表述向您解释，以便于您理解。</p>
-            </section>
-
-            <section id="scope">
-                <h2>一、适用范围</h2>
-                <ol>
-                    <li>a) 在您注册本系统帐号时，您根据本系统要求提供的个人注册信息（包括手机号码）。</li>
-                    <li>b) 在您使用本系统网络服务或访问本系统平台网页时，本系统自动接收并记录的您的浏览器和计算机上的信息，包括但不限于您的 IP 地址、浏览器的类型、使用的语言、访问日期和时间、软硬件特征信息及您需求的网页记录等数据。</li>
-                    <li>c) 本系统通过合法途径从商业伙伴处取得的用户个人数据。</li>
-                    <li>d) 位置信息：您使用位置服务时，我们需要收集和处理您的位置信息。</li>
-                    <li>e) 设备信息：为保证服务的正常运行，向您提供问题诊断或设备检测服务，我们会收集您的硬件型号、操作系统版本、设备配置、唯一设备标识符、网络设备硬件地址 MAC、设备连接信息以及设备状态信息等。</li>
-                    <li>f) 设备权限收集说明：
-                        <ol>
-                            <li>1) 电话权限（获取手机识别码）：用于登录识别您的设备身份。</li>
-                            <li>2) 存储权限（读写存储）：用于存储必要的应用配置、下载/更新的内容、报表，或读取您需要上传、同步的内容。</li>
-                            <li>3) 相机权限：当您使用拍摄或扫描相关功能时使用。</li>
-                            <li>4) 相册权限：当您更换头像或在意见反馈中上传图片时使用。</li>
-                        </ol>
-                    </li>
-                </ol>
-                <p>您了解并同意，以下信息不适用本隐私权政策：</p>
-                <ol>
-                    <li>a) 您在使用本系统平台提供的搜索服务时输入的关键字信息；</li>
-                    <li>b) 本系统收集到的您在本系统发布的有关信息数据，包括但不限于参与活动、成交信息及评价详情；</li>
-                    <li>c) 违反法律规定或违反本系统规则的行为及本系统已对您采取的措施。</li>
-                </ol>
-            </section>
-
-            <section id="use">
-                <h2>二、信息使用</h2>
-                <ol>
-                    <li>a) 本系统<strong>不会</strong>向任何无关第三方提供、出售、出租、分享或交易您的个人信息，除非事先得到您的许可，或为向您提供服务之必要（包括与本系统关联公司共同提供服务）。</li>
-                    <li>b) 本系统<strong>不允许</strong>任何第三方以任何手段收集、编辑、出售或者无偿传播您的个人信息。一经发现，将立即终止与该用户的服务协议。</li>
-                    <li>c) 为服务用户的目的，本系统可能使用您的个人信息向您提供产品/服务信息，或在您同意的情况下与合作伙伴共享以便其向您发送相关信息。</li>
-                    <li>d) 为了向您提供更好的服务或产品，本系统可能在下述情形使用用户的个人信息：根据法律法规要求；根据用户授权；根据服务条款或许可协议约定。</li>
-                    <li>e) 为您提供信息或服务、向您发送最新资讯内容。若您拒绝或关闭设备信息后，我们向您推送的信息可能降低精准度或相关度，但不影响您正常使用其他无需该权限的功能。</li>
-                </ol>
-            </section>
-
-            <section id="cookie">
-                <h2>三、Cookie 的使用</h2>
-                <ol>
-                    <li>a) 在您未拒绝接受 Cookies 的情况下，本系统会在您的设备上设定或取用 Cookies，以便您能登录或使用依赖 Cookies 的平台服务或功能。</li>
-                    <li>b) 您可通过浏览器设置拒绝接受 Cookies。但可能因此无法登录或使用部分服务或功能。</li>
-                    <li>c) 通过本系统设定的 Cookies 所取得的有关信息，将适用本政策。</li>
-                </ol>
-            </section>
-
-            <section id="share">
-                <h2>四、信息披露</h2>
-                <p>在如下情况下，本系统将依据您的个人意愿或法律规定全部或部分披露您的个人信息：</p>
-                <ol>
-                    <li>a) 经您事先同意，向第三方披露；</li>
-                    <li>b) 为提供您所要求的产品和服务而必须与第三方分享；</li>
-                    <li>c) 根据法律规定，或行政/司法机构的要求，向第三方或行政、司法机构披露；</li>
-                    <li>d) 如您违反中国有关法律法规或本系统服务协议/相关规则，需要向第三方披露；</li>
-                    <li>e) 如您为适格知识产权投诉人并已提起投诉，应被投诉人要求，向其披露必要信息以处理权利纠纷；</li>
-                    <li>f) 在平台创建的交易中，如任一方履行或部分履行义务并提出信息披露请求的，本系统可向其提供交易对方的联络方式等必要信息，以促成交易完成或纠纷解决；</li>
-                    <li>g) 其它本系统根据法律、法规或网站政策认为合适的披露。</li>
-                </ol>
-            </section>
-
-            <section id="storage">
-                <h2>五、信息存储和交换</h2>
-                <p>本系统收集的有关您的信息和资料将保存在本系统及/或其关联公司的服务器上，这些信息和资料可能传送至您所在国家、地区或信息收集所在地的境外并在境外被访问、存储和展示。</p>
-                <p>为保证向您提供本隐私政策目的所述的服务，我们可能会向第三方服务提供商与业务合作伙伴等第三方共享必要的个人信息。</p>
-                <p>为使您能够接收信息、在第三方平台分享、使用地图服务、播放视频等必要功能，我们的应用中会嵌入授权合作伙伴的 SDK 或类似程序。例如：使用华为/小米/魅族手机时，相应 SDK 可能读取您的设备识别号及联网信息用于下发通知栏消息；使用高德地图服务时，高德 SDK 需要位置权限并收集位置相关信息、设备识别号和联网信息。</p>
-                <p>我们会对授权合作伙伴获取信息的 API、SDK 进行严格安全检测，并与其约定严格的数据保护措施，要求按委托目的、服务说明、本政策及其它相关保密与安全措施处理个人信息。</p>
-                <p>我们还会收集您的 IMSI、IMEI、设备 MAC 地址、软件列表、设备序列号、Android ID 用于判断您上次登录方式，以便为您提供便捷的登录体验。</p>
-
-                <h3>本政策涉及的个人信息或权限包括：</h3>
-                <ol>
-                    <li>（1）基本信息（姓名、生日、性别、住址、电话号码、电子邮箱）；</li>
-                    <li>（2）个人身份信息（身份证/身份证明等）；</li>
-                    <li>（3）财产信息（交易记录以及金币、钻石等虚拟财产信息）；</li>
-                    <li>（4）个人位置信息；</li>
-                    <li>（5）网络身份标识信息（系统账号、IP 地址、邮箱地址及与前述有关的密码、密保）；通讯录；</li>
-                    <li>（6）个人上网记录（搜索记录、软件使用记录、点击记录）；</li>
-                    <li>（7）个人常用设备信息（硬件型号、设备 MAC 地址、操作系统类型）；</li>
-                    <li>（8）软件列表、唯一设备识别码（如 IMEI/Android ID/IDFA/OPENUDID/GUID、SIM 卡 IMSI 等），以及可能的 ICCID、IP、SD 卡数据、设备序列号、传感器与剪切板信息等。</li>
-                </ol>
-            </section>
-
-            <section id="sdk">
-                <h2>第三方 SDK 列表</h2>
-
-                <h3>（1）移动智能终端补充设备标识体系统一调用 SDK</h3>
-                <ul>
-                    <li>包名：<code class="k">com.bun</code></li>
-                    <li>SDK 厂家：中国信息通信研究院</li>
-                    <li>用途：获取各设备厂商的补充设备标识（OAID、AAID 等）</li>
-                    <li>个人信息：获取 OAID</li>
-                </ul>
-
-                <h3>高德 SDK（定位 & 地图）</h3>
-                <ul>
-                    <li>开发者：高德软件有限公司</li>
-                    <li>隐私链接：<a href="https://lbs.amap.com/pages/privacy/" target="_blank" rel="noopener">https://lbs.amap.com/pages/privacy/</a></li>
-                    <li>作用：定位、地图展示及 POI 查询</li>
-                    <li>收集个人信息类型：外部存储状态、最近一次地理位置信息、持续定位、网络类型、网络运营商、IMEI、MAC 地址、Wi‑Fi 信息等</li>
-                    <li>隐私政策链接：<a href="https://lbs.amap.com/pages/privacy/" target="_blank" rel="noopener">https://lbs.amap.com/pages/privacy/</a></li>
-                </ul>
-
-                <h3>（3）支付宝 App 支付客户端 SDK</h3>
-                <ul>
-                    <li>开发者：支付宝（杭州）信息技术有限公司</li>
-                    <li>隐私链接：<a href="https://opendocs.alipay.com/open/54/01g6qm#%E6%94%AF%E4%BB%98%E5%AE%9D%20App%20%E6%94%AF%E4%BB%98%E5%AE%A2%E6%88%B7%E7%AB%AF%20SDK%20%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96" target="_blank" rel="noopener">官方说明</a>；主站：<a href="https://www.alipay.com/" target="_blank" rel="noopener">https://www.alipay.com/</a></li>
-                    <li>作用：用于支付宝支付</li>
-                    <li>收集个人信息类型：系统语言、系统唯一标识符、外部存储状态、网络类型、设备型号、设备制造商、SIM 卡序列号、IMEI、MAC 地址、ANDROID_ID、IP 地址、Wi‑Fi 信息、应用安装列表、OpenUDID</li>
-                </ul>
-
-                <h3>微信 OpenSDK（含登录/分享/支付 & Bugly）</h3>
-                <ul>
-                    <li>开发者：深圳市腾讯计算机系统有限公司</li>
-                    <li>隐私链接：<a href="https://support.weixin.qq.com/cgi-bin/mmsupportacctnodeweb-bin/pages/RYiYJkLOrQwu0nb8" target="_blank" rel="noopener">微信隐私说明</a></li>
-                    <li>作用：微信授权登录、分享、支付；Bugly 用于崩溃统计分析</li>
-                    <li>收集个人信息类型：第三方账号、设备信息（OpenUDID、IMEI、IDFA、MAC、设备型号、系统版本、厂商）、设备语言、时区、网络/语言状态；Bugly 会读取崩溃环境（崩溃信息及线程堆栈、ROM/RAM/SD 容量）、包名、版本、进程名等</li>
-                </ul>
-
-                <h3>QQ 互联 SDK（Android 版）</h3>
-                <ul>
-                    <li>开发者：深圳市腾讯计算机系统有限公司</li>
-                    <li>隐私链接：<a href="https://wiki.connect.qq.com/qq%e4%ba%92%e8%81%94sdk%e9%9a%90%e7%a7%81%e4%bf%9d%e6%8a%a4%e5%a3%b0%e6%98%8e" target="_blank" rel="noopener">隐私声明</a>；腾讯隐私政策：<a href="https://www.tencent.com/zh-cn/privacy-policy.html" target="_blank" rel="noopener">链接</a></li>
-                    <li>目的：支持 QQ 授权登录及分享</li>
-                    <li>收集个人信息类型：设备型号、操作系统版本、唯一设备标识符、电池、信号强度、软件版本号、浏览器类型、IP 地址、地理位置、服务日志信息、通讯日志信息</li>
-                </ul>
-
-                <h3>腾讯 Bugly SDK</h3>
-                <ul>
-                    <li>用户协议：<a href="https://bugly.qq.com/v2/contract" target="_blank" rel="noopener">https://bugly.qq.com/v2/contract</a></li>
-                    <li>收集个人信息类型：运行进程信息、日志信息（自定义日志、Logcat、崩溃堆栈）、联网信息、系统名称/版本、IMEI、IMSI、DeviceID、设备 MAC 地址、国家码</li>
-                    <li>目的：提供 App 稳定性监控、崩溃上报，帮助开发者快速定位问题</li>
-                </ul>
-
-                <h3>（7）声网（Agora）音视频 SDK</h3>
-                <ul>
-                    <li>开发者：上海兆言网络科技有限公司</li>
-                    <li>隐私链接：<a href="https://www.shengwang.cn/SDK-privacy-policy/" target="_blank" rel="noopener">https://www.shengwang.cn/SDK-privacy-policy/</a></li>
-                    <li>所涉权限/信息：录音与麦克风、摄像头、电话状态、Wi‑Fi/网络状态、运营商信息、蓝牙、网络访问、修改音频设置、写外部存储、保持设备唤醒</li>
-                    <li>用途：提供实时音视频云服务</li>
-                </ul>
-            </section>
-
-            <section id="rights">
-                <h2>六、如何访问和管理自己的信息、信息安全</h2>
-                <h3>（一）信息安全</h3>
-                <ol>
-                    <li>a) 账号均有安全保护功能，请妥善保管用户名及密码。我们通过密码加密等安全措施保护您的信息，但请知悉网络环境下不存在“绝对安全”。</li>
-                    <li>b) 在使用本系统进行交易时，您可能需要向交易相对方披露联络方式或邮政地址等个人信息。请仅在必要情形下提供。如发现个人信息泄露，尤其是用户名及密码泄露，请立即联系本系统客服。</li>
-                </ol>
-                <h3>（二）如何访问和管理自己的信息</h3>
-                <ol>
-                    <li>a) 我们将采取适当技术手段，保障您可以查询您的注册信息。您可通过“我的”查看头像、昵称等信息，并在“设置”中修改昵称。</li>
-                    <li>b) 账号注销：您可点击“我的 → 隐私与安全 → 注销账号”，输入登录密码完成注销。注销后，我们将对已收集的个人信息进行删除或匿名化处理。</li>
-                </ol>
-            </section>
-
-            <section id="other">
-                <h2>七、其他</h2>
-                <p>本隐私政策的签订、生效、履行、争议解决均适用中华人民共和国法律。</p>
-                <p>有关本政策的争议应通过友好协商解决；协商不成的，提交公司所在地有管辖权的法院诉讼解决。</p>
-            </section>
-        </article>
-    </div>
-
-    <footer>
-        © <span id="y"></span> 温州市楠信科技有限公司 · “信安达”
-    </footer>
+<div class="meta">
+    <p>发布及生效时间：2025年8月14日<br />
+        更新时间：2025年9月3日<br />
+        公司名称：温州市楠信科技有限公司<br />
+        注册地址/常用办公联系地址：浙江省温州市龙湾区蒲州街道高一路168号E幢5楼568室<br />
+        联系邮箱：2015539763@qq.com</p>
 </div>
 
-<script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-</script>
+<p>本政策仅适用于温州市楠信科技有限公司提供的产品和服务及其延伸的功能（以下简称“信安达”）。如我们提供的某款产品有单独的隐私政策或相应的用户服务协议当中存在特殊约定，则该产品的隐私政策将优先适用；该款产品隐私政策和用户服务协议未涵盖的内容，以本政策内容为准。除本隐私权政策另有规定外，在未征得您事先许可的情况下，本系统不会将这些信息对外披露或向第三方提供。本系统会不时更新本隐私权政策。 您在同意本系统服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于本系统服务使用协议不可分割的一部分。</p>
+
+<p>本政策适用于“信安达”提供的所有产品和服务。在您使用“信安达”各项产品或者服务前，请您务必仔细阅读并透彻理解本政策，特别是以粗体/粗体下划线标识的条款，您应重点阅读，确保您充分理解和同意后再开始使用。本政策中涉及的专业词汇，我司尽量以简明通俗的表述向您解释，以便于您理解。</p>
+
+<h2>本隐私政策将帮助您了解以下内容</h2>
+<ol>
+    <li>定义及适用范围</li>
+    <li>我司如何收集和使用您的个人信息</li>
+    <li>我司如何使用Cookie和同类技术</li>
+    <li>我司如何共享、转让、公开披露您的信息</li>
+    <li>我司如何保护、存储您的信息</li>
+    <li>如何访问和管理自己的信息、信息安全</li>
+    <li>其他</li>
+</ol>
+
+<h2>一、适用范围</h2>
+<div class="section">
+    <p>a) 在您注册本系统帐号时，您根据本系统要求提供的个人注册信息（包括手机号码）；</p>
+
+    <p>b) 在您使用本系统网络服务，或访问本系统平台网页时，本系统自动接收并记录的您的浏览器和计算机上的信息，包括但不限于您的IP地址、浏览器的类型、使用的语言、访问日期和时间、软硬件特征信息及您需求的网页记录等数据；</p>
+
+    <p>c) 本系统通过合法途径从商业伙伴处取得的用户个人数据。</p>
+
+    <p>d）位置信息：您使用位置服务时，我们需要收集和处理您的位置信息。</p>
+
+    <p>e）设备信息：为了保证服务的正常运行，向您提供问题诊断或设备检测服务，我们会收集您的硬件型号、操作系统版本、设备配置、唯一设备标识符、网络设备硬件地址MAC、设备连接信息以及设备状态信息等。基于不同的系统，设备信息表述文字有所不同。</p>
+
+    <p>f）设备权限收集说明：</p>
+    <ol>
+        <li>电话权限(获取手机识别码 ):您登录本平台识别您的设备身份，需要调用您的电话权限获取此项信息，除此之外不会基于其他用途进行调用。</li>
+        <li>存储权限(读写存储):为了存储必要的应用配置文件以及您所选择下载、更新的内容、报表，或读取您需要上传、同步的内容，需要调用您的存储权限。</li>
+        <li>相机权限:当您使用拍摄或扫描相关功能时，我们需要调用您的相机权限。</li>
+        <li>相册权限：当您使用更换头像或者意见反馈填写功能时，我们需要调用您的相册获取图片权限填写。</li>
+    </ol>
+
+    <p>您了解并同意，以下信息不适用本隐私权政策：</p>
+    <ol>
+        <li>a) 您在使用本系统平台提供的搜索服务时输入的关键字信息；</li>
+        <li>b) 本系统收集到的您在本系统发布的有关信息数据，包括但不限于参与活动、成交信息及评价详情；</li>
+        <li>c) 违反法律规定或违反本系统规则行为及本系统已对您采取的措施。</li>
+    </ol>
+</div>
+
+<h2>二、信息使用</h2>
+<div class="section">
+    <p>a) 本系统不会向任何无关第三方提供、出售、出租、分享或交易您的个人信息，除非事先得到您的许可，或该第三方和本系统（含本系统关联公司）单独或共同为您提供服务，且在该服务结束后，其将被禁止访问包括其以前能够访问的所有这些资料。</p>
+
+    <p>b) 本系统亦不允许任何第三方以任何手段收集、编辑、出售或者无偿传播您的个人信息。任何本系统平台用户如从事上述活动，一经发现，本系统有权立即终止与该用户的服务协议。</p>
+
+    <p>c) 为服务用户的目的，本系统可能通过使用您的个人信息，向您提供信息，包括但不限于向您发出产品和服务信息，或者与本系统合作伙伴共享信息以便他们向您发送有关其产品和服务的信息（后者需要您的事先同意）。</p>
+
+    <p>d）为了向用户提供更好的服务或产品，本系统可能会在下述情形使用用户的个人信息：<br />
+        根据相关法律法规的要求；<br />
+        根据用户的授权；<br />
+        根据本系统相关服务条款、应用许可使用协议的约定。</p>
+
+    <p>e）为您提供信息或服务，向您发送最新资讯内容。若您拒绝或关闭设备信息后，我们向您推送的信息会降低精准度或相关度，但不影响您正常使用其他不需要该权限的功能。</p>
+</div>
+
+<h2>三、Cookie的使用</h2>
+<div class="section">
+    <p>a) 在您未拒绝接受cookies的情况下，本系统会在您的计算机上设定或取用cookies，以便您能登录或使用依赖于cookies的本系统平台服务或功能。本系统使用cookies可为您提供更加周到的服务，包括推广服务。</p>
+
+    <p>b) 您有权选择接受或拒绝接受cookies。您可以通过修改浏览器设置的方式拒绝接受cookies。但如果您选择拒绝接受cookies，则您可能无法登录或使用依赖于cookies的本系统网络服务或功能。</p>
+
+    <p>c) 通过本系统所设cookies所取得的有关信息，将适用本政策。</p>
+</div>
+
+<h2>四、信息披露</h2>
+<div class="section">
+    <p>在如下情况下，本系统将依据您的个人意愿或法律的规定全部或部分的披露您的个人信息：</p>
+    <ol>
+        <li>a) 经您事先同意，向第三方披露；</li>
+        <li>b) 为提供您所要求的产品和服务，而必须和第三方分享您的个人信息；</li>
+        <li>c) 根据法律的有关规定，或者行政或司法机构的要求，向第三方或者行政、司法机构披露；</li>
+        <li>d) 如您出现违反中国有关法律、法规或者本系统服务协议或相关规则的情况，需要向第三方披露；</li>
+        <li>e) 如您是适格的知识产权投诉人并已提起投诉，应被投诉人要求，向被投诉人披露，以便双方处理可能的权利纠纷；</li>
+        <li>f) 在本系统平台上创建的某一交易中，如交易任何一方履行或部分履行了交易义务并提出信息披露请求的，本系统有权决定向该用户提供其交易对方的联络方式等必要信息，以促成交易的完成或纠纷的解决。</li>
+        <li>g) 其它本系统根据法律、法规或者网站政策认为合适的披露。</li>
+    </ol>
+</div>
+
+<h2>五、信息存储和交换</h2>
+<div class="section">
+    <p>本系统收集的有关您的信息和资料将保存在本系统及（或）其关联公司的服务器上，这些信息和资料可能传送至您所在国家、地区或本系统收集信息和资料所在地的境外并在境外被访问、存储和展示。</p>
+
+    <p>为保证向您提供本隐私政策目的所述的服务，我们可能会向第三方服务提供商与业务合作伙伴等第三方共享必要的个人信息。</p>
+
+    <p>为了使您能够接收信息、在第三方平台分享信息、使用地图服务、播放视频等必要的功能用途，我们的应用中会嵌入授权合作伙伴的SDK或其他类似的应用程序。如您使用华为/小米/魅族手机时，华为/小米/魅族SDK需要读取您的设备识别号、联网相关信息，用于下发通知栏消息；如您使用高德提供的地图服务，高德SDK需要您打开设备位置权限并收集设备所在位置相关信息信息、设备识别号、联网相关信息。</p>
+
+    <p>我们会对授权合作伙伴获取有关信息的应用程序接口（API）、软件工具开发包（SDK）进行严格的安全检测，并与授权合作伙伴约定严格的数据保护措施，令其按照我们的委托目的、服务说明、本隐私权政策以及其他任何相关的保密和安全措施来处理个人信息。</p>
+
+    <p>我们还会收集您的IMSI、IMEI、设备MAC地址、软件列表、设备序列号、Android ID用于判断您上次登录的方式，目的是方便您使用登录功能。</p>
+
+    <div style="color: #d0021b;">
+    <p>本政策涉及的个人信息或权限包括：</p>
+    <ol>
+        <li>（1）基本信息（包括个人姓名、生日、性别、住址、个人电话号码、电子邮箱）；</li>
+        <li>（2）个人身份信息（包括身份证相关身份证明等）；</li>
+        <li>（3）财产信息（包括交易记录以及金币、钻石等虚拟财产信息）；</li>
+        <li>（4）个人位置信息；</li>
+        <li>（5）网络身份标识信息（包括系统账号、IP地址、邮箱地址及与前述有关的密码、密保）；</li>
+        <li>（6）通讯录；</li>
+        <li>（7）个人上网记录（包括搜索记录、软件使用记录、点击记录）；</li>
+        <li>（8）个人常用设备信息（包括硬件型号、设备MAC地址、操作系统类型）；</li>
+        <li>（9）软件列表唯一设备识别码（如IMEI/android ID/IDFA/OPENUDID/GUID、SIM卡IMSI信息等在内的描述个人常用设备基本情况的信息，存在收集ICCID、Android ID、IP、IMSI、SD卡数据、IMEI、安装列表、设备序列号、传感器、MAC、获取传感器信息、监听传感器、获取设备传感器、加速度传感器、剪切板的行为）。</li>
+    </ol>
+    </div>
+    <h3>第三方SDK列表：</h3>
+    <ol>
+        <li>
+            <p>（1）SDK名称：移动智能终端补充设备标识体系统一调用SDK<br />
+                包名：com.bun<br />
+                SDK厂家：中国信息通信研究院<br />
+                SDK描述：获取华为、小米、OPPO、vivo、中兴、努比亚、魅族、联想、三星等设备厂商的补充设备标识（OAID、AAID等）<br />
+                个人信息：获取OAID</p>
+        </li>
+
+        <li>
+            <p>SDK名称：高德SDK；定位SDK<br />
+                开发者:高德软件有限公司<br />
+                隐私链接：https://lbs.amap.com/pages/privacy/<br />
+                作用：定位以及地图展示及 poi 查询<br />
+                收集个人信息类型：需要获取外部存储状态，最近一次地理位置信息，持续定位，网络类型，网络服务运营商，IMEI，MAC 地址，WiFi 信息。<br />
+                隐私政策链接：https://lbs.amap.com/pages/privacy/</p>
+        </li>
+
+        <li>
+            <p>（3）SDK名称：支付宝-阿里支付；APP支付客户端SDK<br />
+                开发者:支付宝(杭州)信息技术有限公司<br />
+                隐私链接：
+                https://opendocs.alipay.com/open/54/01g6qm#%E6%94%AF%E4%BB%98%E5%AE%A2%E6%88%B7%E7%AB%AF%20SDK%20%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96<br />
+                作用：用于支付宝支付。<br />
+                收集个人信息类型：系统语言，系统唯一标识符，外部存储状态，网络类型，设备型号，设备制造商，SIM 卡序列号，IMEI，MAC 地址，ANDROID_ID，IP 地址，WiFi 信息，应用安装列表，OpenUDID。<br />
+                隐私政策链接：https://www.alipay.com/</p>
+        </li>
+
+        <li>
+            <p>SDK名称：微信；微信OpenSDK Android<br />
+                开发者:深圳市腾讯计算机系统有限公司<br />
+                隐私链接：
+                https://support.weixin.qq.com/cgi-bin/mmsupportacctnodeweb-bin/pages/RYiYJkLOrQwu0nb8<br />
+                作用：使用微信开放平台SDK，支持微信授权登录、微信分享和微信支付。<br />
+                收集个人信息类型：第三方账号、设备信息（包括开放性独立设备标识符(Open UDID)、唯一设备识别码IMEI、IOS 广告标识符(IDFA)、MAC地址、设备型号、终端设备操作系统版本、终端制造厂商）、设备语言、时区和网络/语言状态相关信息，用于统计分析您使用我们的服务数据；Bugly SDK 会读取您的 CRASH 环境（包括 CRASH 信息及线程堆线、ROM/RAM/SD 卡容量）、应用程序包名、应用程序版本、应用程序所属进程名、设备信息（包括开放性独立设备标识符(Open UDID)、IOS 广告标识符(IDFA)、MAC 地址、国际移动设备识别码(IMEI)、设备型号、终端设备操作系统版本、终端制造厂商）、设备语言、时区和网络/语言状态相关信息，用于判断并收集、统计 CRASH 信息。）</p>
+        </li>
+
+        <li>
+            <p>SDK名称：QQSDK；QQ互联sdk（Android版本）<br />
+                开发者:深圳市腾讯计算机系统有限公司<br />
+                收集个人信息类型：设备型号、操作系统版本、唯一设备标识符、电池、信号强度、软件的版本号、浏览器类型、IP地址、地理位置、服务日志信息、通讯日志信息<br />
+                目的：支持QQ授权登录及分享<br />
+                腾讯隐私政策： https://www.tencent.com/zh-cn/privacy-policy.html</p>
+        </li>
+
+        <li>
+            <p>SDK名称：腾讯Bugly SDK<br />
+                收集个人信息类型：在收集运行进程信息时，腾讯bugly SDK将会收集、使用日志信息（包括：第三方开发者自定义日志、Logcat日志以及APP崩溃堆栈信息）、联网信息、系统名称、系统版本、IMEI、IMSI、DEVICEID设备MAC地址以及国家码<br />
+                目的：提供app稳定性监控，程序崩溃上报，帮助开发者快速发现问题<br />
+                用户协议：https://bugly.qq.com/v2/contract</p>
+        </li>
+
+        <li>
+            <p>（7）SDK名称：声网(agora)<br />
+                所涉信息：录音麦克风权限，摄像头权限，电话状态，wifi状态访问，网络状态，运营商信息，蓝牙访问，网络访问，修改音频设置，写外部存储，保持设备唤醒<br />
+                用途：提供实时音视频云服务<br />
+                SDK名称：视频 SDK 、音频 SDK<br />
+                开发者:上海兆言网络科技有限公司<br />
+                隐私链接：https://www.shengwang.cn/SDK-privacy-policy/</p>
+        </li>
+    </ol>
+</div>
+
+<h2>六、如何访问和管理自己的信息、信息安全</h2>
+<div class="section">
+    <h3>（一）信息安全</h3>
+    <p>a) 帐号均有安全保护功能，请妥善保管您的用户名及密码信息。我们将通过对用户密码进行加密等安全措施确保您的信息不丢失，不被滥用和变造。尽管有前述安全措施，但同时也请您注意在信息网络上不存在“完善的安全措施”。</p>
+
+    <p>b) 在使用本系统网络服务进行网上交易时，您不可避免的要向交易对方或潜在的交易对方披露自己的个人信息，如联络方式或者邮政地址。请您妥善保护自己的个人信息，仅在必要的情形下向他人提供。如您发现自己的个人信息泄密，尤其是本系统用户名及密码发生泄露，请您立即联络本系统客服，以便本系统采取相应措施。</p>
+
+    <h3>（二）如何访问和管理自己的信息</h3>
+    <p>a）我们将采取适当的技术手段，保证您可以查询您的注册信息。您可以通过“我的”，查看您的头像、昵称等信息，点击“设置”可以修改昵称。</p>
+
+    <p>b)账号注销<br />
+        您可以通过点击“我的”——“隐私与安全”——“注销账号”，输入登录密码，进行注销账号操作。账号注销后，我们将对已经收集的个人信息进行删除或匿名化处理。</p>
+</div>
+
 </body>
 </html>
