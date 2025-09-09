@@ -4,11 +4,11 @@ return  [
     'connections' => [
         'mysql' => [
             'driver'      => 'mysql',
-            'host'        => '150.109.148.67',
+            'host'        => '101.32.15.123',
             'port'        => '3306',
-            'database'    => 'xad_xprojectcs_c',
-            'username'    => 'xad_xprojectcs_c',
-            'password'    => '7ZrQZRFa2yRZPxTp',
+            'database'    => 'wzxinnan_top',
+            'username'    => 'wzxinnan_top',
+            'password'    => 'Gt9XmXHC9d9XYs68',
             'charset'     => 'utf8mb4',
             'collation'   => 'utf8mb4_general_ci',
             'prefix'      => '',
