@@ -36,6 +36,10 @@ class AccountController extends Base
                 return $this->fail('密码错误');
             }
         }
+        if ($user->status == 1){
+            return $this->fail('用户被禁用');
+        }
+
         $token = JwtToken::generateToken([
             'id' => $user->id,
             'client' => JwtToken::TOKEN_CLIENT_MOBILE
